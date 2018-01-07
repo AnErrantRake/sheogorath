@@ -3,8 +3,8 @@
 #desired size must be smaller than original directory - will not write duplicates
 #for assembling smaller random libraries from larger ones
 
-$inputDirectory = "E:\UpdatedComboMix"
-$outputDirectory = "C:\Users\Talos\Music\ModComboMix"
+$inputDirectory = "C:\MainLibrary"
+$outputDirectory = "C:\LibrarySection"
 $desiredSizeinGB = 3.4
 
 # copy random files until output directory size is less than or equal to desired size
