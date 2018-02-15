@@ -10,7 +10,7 @@ directory = "path/to/dir"
 delimiter = "|"
 
 def list_files(inpath, delim):
-    print("FileName%sCurrentPath%sCreated%sLastTouched%sCategory%sSummary" % (delim,delim,delim,delim,delim)
+    print("FileName%sCurrentPath%sCreated%sLastTouched%sCategory%sSummary" % (delim,delim,delim,delim,delim))
     for root, drop, filenames in os.walk(inpath):
         abspath = os.path.abspath(root)
         for filename in filenames:
