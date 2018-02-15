@@ -3,7 +3,7 @@ import os, time
 # string output, pipe to store
 
 # intended for tracking contents of large/complicated file structures
-# enumerates a file structure for 'dir' in csv format
+# enumerates a file structure for directory in csv format
 # created time might not provide expected result on Unix
 
 directory = "path/to/dir"
