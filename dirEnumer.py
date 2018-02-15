@@ -6,10 +6,10 @@ import os, time
 # enumerates a file structure for 'dir' in csv format
 # created time might not provide expected result on Unix
 
-dir = "path/to/dir"
-delim = "|"
+directory = "path/to/dir"
+delimiter = "|"
 
-def list_files(inpath):
+def list_files(inpath, delim):
     print("FileName%sCurrentPath%sCreated%sLastTouched%sCategory%sSummary" % (delim,delim,delim,delim,delim)
     for root, drop, filenames in os.walk(inpath):
         abspath = os.path.abspath(root)
@@ -18,4 +18,4 @@ def list_files(inpath):
             modified = time.asctime(time.localtime(os.path.getmtime(os.path.join(root, filename))))
             print(filename + delim + abspath + delim + created + delim + modified + delim abspath + delim)
 
-list_files(dir)
+list_files(directory, delimiter)
