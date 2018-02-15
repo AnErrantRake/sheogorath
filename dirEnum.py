@@ -5,7 +5,7 @@ import os, time
 # enumerates a file structure for 'dir'
 # created time might not provide expected result on Unix
 
-dir = "/home/featherweightcinder/Documents/Mobineo/driveOrg"
+dir = "path/to/dir"
 
 def list_files(inpath):
     print("FileName|CurrentPath|Created|LastTouched|Category|Summary")
