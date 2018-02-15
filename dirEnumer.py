@@ -4,6 +4,8 @@ import os, time
 
 # intended for tracking contents of large/complicated file structures
 # enumerates a file structure for directory in csv format
+
+# tested on Unix
 # created time might not provide expected result on Unix
 
 directory = "path/to/dir"
