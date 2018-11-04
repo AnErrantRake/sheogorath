@@ -3,7 +3,7 @@
 
 var LOANER_ID = '1ho8uq1vRXglpGeMjutA5otDhQkvkX7_U9Yprc_UmkxQ';
 var EMAIL_SUBJECT = 'UMNUBC Loan Automator - ';
-var EMAIL_OWNER = '[owner]@[domain]';
+var EMAIL_OWNER = 'pet00845@umn.edu';
 var EMAIL_BODY_SUCCESS = "Our extremely advanced algorithm has identified a potential match!\n" +
                  "One of you (see CC) has an available book, and the other would like to make use of that book.\n" + 
                  "Please reach out to each other to arrange the terms and conditions of your book loan." + 
@@ -159,11 +159,7 @@ function sendNeedReceipt(email, bookTitle){
 }
 
 function isDuplicate(email,existingValues){
-  Logger.log(email);
-  Logger.log(existingValues);
-  Logger.log(existingValues.length);
   for (i = 0; i < existingValues.length; i++) { 
-    Logger.log(existingValues[i]);
     if(String(existingValues[i]) == String(email)){
       return true;
     }
