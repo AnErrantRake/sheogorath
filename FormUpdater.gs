@@ -1,6 +1,6 @@
-var FORM_ID = [SpreadsheetID as 'String'];
+var FORM_ID = '[sheet id]';
 var METADATA_SHEET_NAME = 'Metadata';
-var FORM_BOOKTITLE_ITEM_ID = [FORM ID as Int];
+var FORM_BOOKTITLE_ITEM_ID = '[form id as int]';
 
 //if spreadsheet is edited, updates form to reflect changes
 function onEdit(e){
