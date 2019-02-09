@@ -1,23 +1,23 @@
 //UMNUBC loan system automation script using Google Apps Script
 //spreadsheet values are derived from submitted form data - the same form intended to link to the receiveForm function
 
-var LOANER_ID = '1ho8uq1vRXglpGeMjutA5otDhQkvkX7_U9Yprc_UmkxQ';
-var EMAIL_SUBJECT = 'UMNUBC Loan Automator - ';
-var EMAIL_OWNER = 'pet00845@umn.edu';
+var LOANER_ID = '[sheet id]';
+var EMAIL_SUBJECT = 'Loan Automator - ';
+var EMAIL_OWNER = '[owner email]';
 var EMAIL_BODY_SUCCESS = "Our extremely advanced algorithm has identified a potential match!\n" +
                  "One of you (see CC) has an available book, and the other would like to make use of that book.\n" + 
                  "Please reach out to each other to arrange the terms and conditions of your book loan." + 
                    "\n\n\n" +
-                 "Thank you for using the Loan Automator, brought to you by UMNUBC!";
+                 "Thank you for using the Loan Automator, brought to you by [owner]!";
 var EMAIL_BODY_HAVE = "We have received your submission to loan a book. We will inform you should someone apply to make use of your generous offer." + 
                    "\n\n\n" +
-                 "Thank you for using the Loan Automator, brought to you by UMNUBC!";
+                 "Thank you for using the Loan Automator, brought to you by [owner]!";
 var EMAIL_BODY_NEED = "We have received your request for a book loan. We will inform you should a third party come forward with a copy of the requested book." + 
                    "\n\n\n" +
-                 "Thank you for using the Loan Automator, brought to you by UMNUBC!";
+                 "Thank you for using the Loan Automator, brought to you by [owner]!";
 var EMAIL_BODY_DUPLICATE = "We have received your recent form submission. However, our records indicate you have already submitted a form for this book. Please contact the primary book club email for more personal help with your situation." + 
                    "\n\n\n" +
-                 "Thank you for using the Loan Automator, brought to you by UMNUBC!";
+                 "Thank you for using the Loan Automator, brought to you by [owner]!";
 
 var EMAIL_KEY = 'Email Address';
 var REQUEST_TYPE_KEY = 'Have or Need?';
