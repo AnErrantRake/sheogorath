@@ -1,3 +1,0 @@
-#steam no browser access
-wine steam.exe steam://run/[gameid]
- 
