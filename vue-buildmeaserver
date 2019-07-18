@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# builds a new vue/node server
+# accepts two arguments: serverName -y (flag to open vscode after create)
+
+if [ "$#" -eq 0 ]; then
+    echo "Needs an argument, guy!"
+    exit 1
+fi
+
+echo "$1"
+
+# make directory without overwriting
+mkdir "$1"
+if [ $? -ne 0 ] ; then
+    exit $?
+fi
+cd "$1"
+
+# setup node
+npm init --yes
+npm i esm express mongoose
+touch index.js
+
+# build client side using preset without git
+termite -e 'bash -c "vue create --no-git --bare --skipGetStarted --preset classroomDefault client; exit; exec bash"' &&
+
+# build server side
+mkdir server
+
+# warning and README
+printf "# $1\nI was created with a script. I may have configuration problems." > README.md
+
+# git
+git init
+printf "node_modules\n*/.vscode\n*dbkeys.js" >> .gitignore
+git add -A
+git commit -m "Script Init"
+
+echo "Complete"
+if [[ "$2" == "-y" ]]; then
+   code . --disable-gpu
+fi
+
+
+
